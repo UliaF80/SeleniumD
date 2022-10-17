@@ -16,9 +16,9 @@ build_script:
   - chmod +x gradlew
   - ./gradlew test --info 
 <<<<<<< HEAD
-  - ./gradlew test -Dselenide.headless=true
-
-
   - ./gradlew test -Dselenide.headless=true --info
+
+
+  
   
 
