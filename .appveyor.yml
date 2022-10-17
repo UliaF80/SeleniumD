@@ -18,7 +18,7 @@ build_script:
 <<<<<<< HEAD
   - ./gradlew test -Dselenide.headless=true
 
-=======
+
   - ./gradlew test -Dselenide.headless=true --info
   
 
