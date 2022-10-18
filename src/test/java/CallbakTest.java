@@ -30,6 +30,7 @@ class CallbakTest {
         $("[data-test-id='name']").shouldHave(matchText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
 
     }
+
     @Test
     void phoneStringValidation() {
         open("http://localhost:9999");
@@ -39,6 +40,7 @@ class CallbakTest {
         $("[type='button']").click();
         $("[data-test-id='phone'].input_invalid .input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
     }
+
     @Test
     void checkboxNotChecked() {
         open("http://localhost:9999");
@@ -48,6 +50,7 @@ class CallbakTest {
         $("[type='button']").click();
         $("[data-test-id='agreement'].input_invalid .checkbox__text").shouldHave(exactText("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй"));
     }
+
     @Test
     void sendEmptyFailed() {
         open("http://localhost:9999");
@@ -57,7 +60,6 @@ class CallbakTest {
         $("[type='button']").click();
         $("[data-test-id='name'].input_invalid .input__sub").shouldHave(exactText("Поле обязательно для заполнения"));
     }
-
 
 
 }
